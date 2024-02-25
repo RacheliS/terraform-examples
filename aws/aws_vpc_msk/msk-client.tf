@@ -58,6 +58,9 @@ resource "aws_instance" "Kafka-Client-EC2-Instance" {
       "Name", "Kafka-Client-EC2-Instance"
     )
   )
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 output "IP" {
