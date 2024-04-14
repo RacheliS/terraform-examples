@@ -23,6 +23,7 @@ resource "aws_lambda_function" "local_zipfile" {
   environment {
     variables = "${var.function_env_vars}"
   }
+  code_signing_config_arn = "CKV_ANY"
 }
 
 # This aws_lambda_function is used when invoked with a zipfile in S3
