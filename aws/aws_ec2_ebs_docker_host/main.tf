@@ -43,6 +43,9 @@ resource "aws_instance" "this" {
       "rm /home/${var.ssh_username}/provision-swap.sh",
     ]
   }
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 # Attach the separate data volume to the instance, if so configured
